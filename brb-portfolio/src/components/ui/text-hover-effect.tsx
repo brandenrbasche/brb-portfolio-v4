@@ -20,6 +20,7 @@ export const TextHoverEffect = ({
             const svgRect = svgRef.current.getBoundingClientRect();
             const cxPercentage = ((cursor.x - svgRect.left) / svgRect.width) * 100;
             const cyPercentage = ((cursor.y - svgRect.top) / svgRect.height) * 100;
+
             setMaskPosition({
                 cx: `${cxPercentage}%`,
                 cy: `${cyPercentage}%`,
@@ -32,6 +33,7 @@ export const TextHoverEffect = ({
             ref={svgRef}
             width="100%"
             height="100%"
+            // viewBox="0 0 300 100"
             viewBox="0 0 300 100"
             xmlns="http://www.w3.org/2000/svg"
             onMouseEnter={() => setHovered(true)}
@@ -93,7 +95,7 @@ export const TextHoverEffect = ({
                 dominantBaseline="hanging"
                 strokeWidth="0.3"
                 // className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-5xl"
-                className="font-[helvetica] font-bold stroke-neutral-800 dark:stroke-neutral-800 fill-transparent text-5xl"
+                className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-[3.25rem]"
                 style={{ opacity: hovered ? 0.7 : 0 }}
             >
                 {text}
@@ -105,7 +107,7 @@ export const TextHoverEffect = ({
                 dominantBaseline="hanging"
                 strokeWidth="0.3"
                 // className="font-[helvetica] font-bold fill-transparent text-5xl stroke-neutral-200 dark:stroke-neutral-800"
-                className="font-[helvetica] font-bold fill-transparent text-5xl stroke-neutral-800 dark:stroke-neutral-800"
+                className="font-[helvetica] font-bold fill-transparent text-[3.25rem] stroke-neutral-200 dark:stroke-neutral-800"
                 initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
                 animate={{
                     strokeDashoffset: 0,
@@ -126,7 +128,7 @@ export const TextHoverEffect = ({
                 stroke="url(#textGradient)"
                 strokeWidth="0.3"
                 mask="url(#textMask)"
-                className="font-[helvetica] font-bold fill-transparent text-5xl"
+                className="font-[helvetica] font-bold fill-transparent text-[3.25rem]"
             >
                 {text}
             </text>

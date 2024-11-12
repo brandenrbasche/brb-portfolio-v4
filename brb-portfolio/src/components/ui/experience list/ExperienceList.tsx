@@ -7,8 +7,14 @@ interface ExperienceListProps {
 
 const listItems: ListItemType[] = [
     {
+        title: 'Giampiero Tagliaferri',
+        description: 'Architecture and design practice based in LA and Milan',
+        link: 'https://sveltescope.com/',
+        startDate: '2024',
+    },
+    {
         title: 'SvelteScope',
-        description: 'Insert description here',
+        description: 'Developer tool for debugging Svelte state',
         link: 'https://sveltescope.com/',
         startDate: '2024',
     },
