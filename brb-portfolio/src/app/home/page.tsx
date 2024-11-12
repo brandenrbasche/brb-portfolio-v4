@@ -4,10 +4,11 @@ import ExperienceList from "@/components/ui/experience list/ExperienceList";
 export default function Homepage() {
     return (
         <>
-            <div className='absolute w-screen -top-3'>
-                <TextHoverEffect text={'BRB.CODES'}/>
+            <div className='w-screen absolute -top-1'>
+                {/*<TextHoverEffect text={'BRB.CODES'}/>*/}
+                <TextHoverEffect text={'BRANDEN BASCHE'}/>
             </div>
-            <div className='flex items-center justify-center w-screen h-screen box-border relative'>
+            <div className='flex items-center justify-center w-screen h-screen box-border'>
                 <ExperienceList />
             </div>
         </>
