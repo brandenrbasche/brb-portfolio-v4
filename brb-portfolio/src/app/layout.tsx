@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 import Dock from "@/components/ui/dock/dock";
 import Topnav from "@/components/ui/Topnav";
