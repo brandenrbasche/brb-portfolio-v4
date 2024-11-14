@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'GeistMono';
+  src: url("fonts/GeistMonoVF.woff");
+}
+
 :root {
-  --background: black;
-  --foreground: white;
+  --background: hsl(0 0% 99.0%);
+  --foreground: rgb(23, 23, 23);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,8 +22,14 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-family: Geist, Helvetica, sans-serif;
+  /*font-family: Arial, Helvetica, sans-serif;*/
 }
+
+/*p {*/
+/*  color: var(--foreground);*/
+/*}*/
 
 @layer utilities {
   .text-balance {
