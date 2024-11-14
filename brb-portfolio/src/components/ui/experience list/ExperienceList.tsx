@@ -15,7 +15,7 @@ const listItems: ListItemType[] = [
     {
         title: 'Giampiero Tagliaferri',
         description: 'Architecture and design practice based in LA and Milan',
-        link: 'https://sveltescope.com/',
+        link: 'https://www.giampierotagliaferri.com/',
         startDate: '2024',
     },
     {
