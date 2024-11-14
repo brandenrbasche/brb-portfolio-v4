@@ -5,8 +5,10 @@ import { motion } from "framer-motion";
 export const TextHoverEffect = ({
                                     text,
                                     duration,
+                                    fontSizeClass
                                 }: {
     text: string;
+    fontSizeClass: string;
     duration?: number;
     automatic?: boolean;
 }) => {
@@ -20,6 +22,7 @@ export const TextHoverEffect = ({
             const svgRect = svgRef.current.getBoundingClientRect();
             const cxPercentage = ((cursor.x - svgRect.left) / svgRect.width) * 100;
             const cyPercentage = ((cursor.y - svgRect.top) / svgRect.height) * 100;
+
             setMaskPosition({
                 cx: `${cxPercentage}%`,
                 cy: `${cyPercentage}%`,
@@ -49,11 +52,11 @@ export const TextHoverEffect = ({
                 >
                     {hovered && (
                         <>
-                            <stop offset="0%" stopColor={"var(--yellow-500)"} />
-                            <stop offset="25%" stopColor={"var(--red-500)"} />
-                            <stop offset="50%" stopColor={"var(--blue-500)"} />
-                            <stop offset="75%" stopColor={"var(--cyan-500)"} />
-                            <stop offset="100%" stopColor={"var(--violet-500)"} />
+                            <stop offset="0%" stopColor={"#024059"}/>
+                            <stop offset="25%" stopColor={"#026873"}/>
+                            <stop offset="50%" stopColor={"#04BF8A"}/>
+                            <stop offset="100%" stopColor={"#025940"}/>
+                            <stop offset="100%" stopColor={"#03A64A"}/>
                         </>
                     )}
                 </linearGradient>
@@ -63,7 +66,7 @@ export const TextHoverEffect = ({
                     gradientUnits="userSpaceOnUse"
                     r="20%"
                     animate={maskPosition}
-                    transition={{ duration: duration ?? 0, ease: "easeOut" }}
+                    transition={{duration: duration ?? 0, ease: "easeOut"}}
 
                     // example for a smoother animation below
 
@@ -93,7 +96,7 @@ export const TextHoverEffect = ({
                 dominantBaseline="hanging"
                 strokeWidth="0.3"
                 // className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-5xl"
-                className="font-[helvetica] font-bold stroke-neutral-800 dark:stroke-neutral-800 fill-transparent text-5xl"
+                className={`font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent ${fontSizeClass}`}
                 style={{ opacity: hovered ? 0.7 : 0 }}
             >
                 {text}
@@ -105,7 +108,7 @@ export const TextHoverEffect = ({
                 dominantBaseline="hanging"
                 strokeWidth="0.3"
                 // className="font-[helvetica] font-bold fill-transparent text-5xl stroke-neutral-200 dark:stroke-neutral-800"
-                className="font-[helvetica] font-bold fill-transparent text-5xl stroke-neutral-800 dark:stroke-neutral-800"
+                className={`font-[helvetica] font-bold fill-transparent ${fontSizeClass} stroke-neutral-200 dark:stroke-neutral-800`}
                 initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
                 animate={{
                     strokeDashoffset: 0,
@@ -126,7 +129,7 @@ export const TextHoverEffect = ({
                 stroke="url(#textGradient)"
                 strokeWidth="0.3"
                 mask="url(#textMask)"
-                className="font-[helvetica] font-bold fill-transparent text-5xl"
+                className={`font-[helvetica] font-bold fill-transparent ${fontSizeClass}`}
             >
                 {text}
             </text>
