@@ -52,11 +52,6 @@ export const TextHoverEffect = ({
                 >
                     {hovered && (
                         <>
-                            {/*<stop offset="0%" stopColor={"var(--yellow-500)"} />*/}
-                            {/*<stop offset="25%" stopColor={"var(--red-500)"} />*/}
-                            {/*<stop offset="50%" stopColor={"var(--blue-500)"} />*/}
-                            {/*<stop offset="75%" stopColor={"var(--cyan-500)"} />*/}
-                            {/*<stop offset="100%" stopColor={"var(--violet-500)"} />*/}
                             <stop offset="0%" stopColor={"#024059"}/>
                             <stop offset="25%" stopColor={"#026873"}/>
                             <stop offset="50%" stopColor={"#04BF8A"}/>
@@ -101,7 +96,6 @@ export const TextHoverEffect = ({
                 dominantBaseline="hanging"
                 strokeWidth="0.3"
                 // className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-5xl"
-                // className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-[2.025rem]"
                 className={`font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent ${fontSizeClass}`}
                 style={{ opacity: hovered ? 0.7 : 0 }}
             >
