@@ -7,6 +7,12 @@ interface ExperienceListProps {
 
 const listItems: ListItemType[] = [
     {
+      title: 'PM Creates',
+      description: 'E-commerce brand honoring Japanese tattoo artists',
+      link: 'https://pmcreates.com/',
+      startDate: '2024'
+    },
+    {
         title: 'Giampiero Tagliaferri',
         description: 'Architecture and design practice based in LA and Milan',
         link: 'https://sveltescope.com/',
@@ -20,7 +26,7 @@ const listItems: ListItemType[] = [
     },
     {
         title: 'Planet Chrome',
-        description: 'Insert description here',
+        description: 'Astronaut-themed productivity Chrome extension',
         link: '/',
         startDate: '2024',
     },
@@ -28,7 +34,7 @@ const listItems: ListItemType[] = [
 
 export default function ExperienceList() {
     return (
-        <div className='flex flex-col items-center justify-center gap-7 box-border w-full max-w-[720px]'>
+        <div className='flex flex-col items-center justify-center gap-y-8 box-border w-full max-w-[800px] pb-[25vh] px-6'>
             {listItems.map((item: ListItemType, index: number) => (
                 <ListItem
                     key={index}

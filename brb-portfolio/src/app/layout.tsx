@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 import Dock from "@/components/ui/dock/dock";
+import Topnav from "@/components/ui/Topnav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,8 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistMono.className} antialiased`}
+        className={`${geistSans.className} antialiased`}
       >
+        <Topnav />
         {children}
         <Dock />
       </body>
