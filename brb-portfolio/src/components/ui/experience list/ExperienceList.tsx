@@ -50,7 +50,7 @@ const listItems: ListItemType[] = [
         title: 'Virtual Reality Ireland',
         description: 'Boutique VR agency in Dublin',
         link: 'https://www.virtualreality.ie/',
-        startDate: '2024',
+        startDate: '2019',
         isModal: false
     },
 ];
