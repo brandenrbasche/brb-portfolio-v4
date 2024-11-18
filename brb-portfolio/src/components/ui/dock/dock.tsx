@@ -1,11 +1,11 @@
 import {FloatingDock} from "@/components/ui/dock/floating-dock";
 
 import { AiFillHome } from "react-icons/ai";
-import { GoProjectRoadmap } from "react-icons/go";
-import PointingIcon from '@/components/ui/PointingIcon'
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
+import { VscSmiley } from "react-icons/vsc";
+
 
 const dockItems = [
     {
@@ -15,7 +15,7 @@ const dockItems = [
     },
     {
         title: 'About',
-        icon: <PointingIcon />,
+        icon: <VscSmiley />,
         href: '/about'
     },
     {
