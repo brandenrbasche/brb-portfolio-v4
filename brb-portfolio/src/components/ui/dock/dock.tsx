@@ -12,33 +12,38 @@ const dockItems = [
         title: 'Home',
         icon: <AiFillHome />,
         href: '/',
+        externalLink: false
     },
     {
         title: 'About',
         icon: <VscSmiley />,
-        href: '/about'
+        href: '/about',
+        externalLink: false
     },
     {
         title: 'LinkedIn',
         icon: <FaLinkedin />,
-        href: 'https://www.linkedin.com/in/brandenbasche/'
+        href: 'https://www.linkedin.com/in/brandenbasche/',
+        externalLink: true
     },
     {
         title: 'GitHub',
         icon: <FaGithub />,
-        href: 'https://github.com/brandenrbasche/'
+        href: 'https://github.com/brandenrbasche/',
+        externalLink: true
     },
     {
         title: 'Email',
         icon: <MdAlternateEmail />,
-        href: 'mailto:brandenbasche@gmail.com'
+        href: 'mailto:brandenbasche@gmail.com',
+        externalLink: true
     },
 ];
 
 
 export default function Dock() {
     return (
-        <div className='mb-6 fixed bottom-0 left-1/2 transform -translate-x-1/2'>
+        <div className='w-full flex justify-end mb-6 mr-[24px] fixed bottom-0 md:left-1/2 md:transform md:-translate-x-1/2'>
             <FloatingDock items={dockItems} />
         </div>
     )
