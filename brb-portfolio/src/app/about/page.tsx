@@ -16,7 +16,7 @@ export default function About() {
                     in frameworks like React with TypeScript and the ability to deliver software with high test
                     coverage.</p>
                 <p>I&apos;m always eager to team up with fellow devs and designers who share a passion for building cool
-                    things - let's connect!</p>
+                    things - let&apos;s connect!</p>
             </div>
         </div>
         // </div>
