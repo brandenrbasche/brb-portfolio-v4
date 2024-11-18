@@ -28,11 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.className} antialiased`}
+        className={`${geistSans.className} antialiased flex flex-col items-center justify-center`}
       >
-        <Topnav />
-        {children}
-        <Dock />
+        <div className='background-image-layer' />
+        <div className='w-screen max-w-[800px] box-border flex flex-col items-center px-6'>
+          <Topnav />
+          {children}
+          <Dock />
+        </div>
       </body>
     </html>
   );
